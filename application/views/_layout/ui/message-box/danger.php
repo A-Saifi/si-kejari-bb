@@ -14,5 +14,3 @@
     </div>
 </div>
 <!-- end danger with sound -->
-
-<?php $this->load->view('_layout/ui/message-box/show') ?>

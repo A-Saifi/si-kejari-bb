@@ -10,9 +10,10 @@ class Dashboard extends Admin
     $this->layout->admin('dashboard/index',
       [
         'title' => 'Admin - Dashboard',
+        'sidebar' => 1,
         'page_title' => 'Dashboard',
         'breadcrumb' => [
-                          'Dashboard',                          
+                          ['page' => 'Dashboard', 'url' => base_url('admin')],
                         ],
       ]
     );

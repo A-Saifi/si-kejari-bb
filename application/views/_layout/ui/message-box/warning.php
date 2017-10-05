@@ -13,5 +13,3 @@
     </div>
 </div>
 <!-- end warning -->
-
-<?php $this->load->view('_layout/ui/message-box/show') ?>
