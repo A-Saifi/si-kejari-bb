@@ -5,7 +5,6 @@ assets/template/*
 application/cache/*
 !application/cache/index.html
 !application/cache/.htaccess
-!application/cache/sessions
 
 application/logs/*
 !application/logs/index.html

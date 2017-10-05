@@ -1,8 +1,9 @@
 <?php
+
 /**
  *
  */
-class Admin extends CI_Controller
+class Base extends CI_Controller
 {
 
   function __construct()
@@ -10,8 +11,6 @@ class Admin extends CI_Controller
     parent::__construct();
     $this->load->helper(['url', 'html']);
     $this->load->library(['session', 'layout']);
-
-    #$this->is_logged_in();
 
     date_default_timezone_set("Asia/Bangkok");
   }
@@ -24,11 +23,41 @@ class Admin extends CI_Controller
           </script>";
   }
 
-  private function is_logged_in()
+  function go_to($url)
   {
-    if ($this->session->userdata('admin')==null) {
-      $this->alert('Anda belum login sebagai admin', base_url('login'));
+    echo "<script>
+            window.location.href='".$url."';
+          </script>";
+  }
+
+  function messageBox($jenis, $judul, $informasi)
+  {
+    $this->load->view('_layout/ui/message-box/'.$jenis, [
+      'jenis' => $jenis,
+      'judul' => $judul,
+      'informasi' => $informasi,
+    ]);
+  }
+
+  function is_logged_in($user,$url)
+  {
+    if ($this->session->userdata($user)==null) {
+      $this->alert('Anda belum login sebagai admin', $url);
     }
+  }
+}
+
+
+/**
+ *
+ */
+class Admin extends Base
+{
+
+  function __construct()
+  {
+    parent::__construct();
+    $this->is_logged_in('admin', base_url('login'));
   }
 }
 

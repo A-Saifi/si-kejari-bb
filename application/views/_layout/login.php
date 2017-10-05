@@ -22,7 +22,7 @@
                 <div class="login-logo"></div>
                 <div class="login-body">
                     <div class="login-title"><strong>Selamat datang!</strong></div>
-                    <form action="<?= base_url('login/auth') ?>" class="form-horizontal" method="post">
+                    <form action="" class="form-horizontal" method="post">
                     <div class="form-group">
                         <div class="col-md-12">
                             <input type="text" class="form-control" placeholder="Username" name="username" required />
@@ -38,7 +38,7 @@
                             <a href="#" class="btn btn-link btn-block">Lupa password?</a>
                         </div>
                         <div class="col-md-6">
-                            <button class="btn btn-info btn-block">Log In</button>
+                            <button class="btn btn-info btn-block" >Log In</button>
                         </div>
                     </div>
                     </form>
@@ -56,5 +56,13 @@
             </div>
 
         </div>
+
+        <!-- START PRELOADS -->
+        <audio id="audio-alert" src="<?= $template ?>audio/alert.mp3" preload="auto"></audio>
+        <audio id="audio-fail" src="<?= $template ?>audio/fail.mp3" preload="auto"></audio>
+        <!-- END PRELOADS -->
+
+        <?php $this->load->view('_layout/admin/footer/scripts') ?>
+
     </body>
 </html>
