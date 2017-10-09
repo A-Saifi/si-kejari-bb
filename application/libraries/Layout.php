@@ -26,7 +26,8 @@ class Layout
   function login($data)
   {
     $data['template'] = base_url('assets/template/');
-
+    $data['layout'] = "_layout/admin/";
+    
     $this->CI->load->view("_layout/login", $data);
   }
 }

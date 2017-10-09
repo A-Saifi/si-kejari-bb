@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" id="theme" href="<?= $template ?>css/theme-default.css"/>
     <!-- EOF CSS INCLUDE -->
 </head>
-  <body>
+  <body class="page-container-boxed">
 
     <!-- START PAGE CONTAINER -->
     <div class="page-container">
@@ -49,4 +49,4 @@
         <!-- END PAGE TITLE -->
 
         <!-- PAGE CONTENT WRAPPER -->
-        <div class="page-content-wrap">        
+        <div class="page-content-wrap">

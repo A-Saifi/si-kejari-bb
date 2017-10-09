@@ -41,22 +41,10 @@ class Base extends CI_Controller
     $this->load->view('_layout/ui/message-box/show');
   }
 
-  function messageBoxLink($jenis, $judul, $informasi, $url)
-  {
-    $this->load->view('_layout/ui/message-box/link/'.$jenis, [
-      'jenis' => $jenis,
-      'judul' => $judul,
-      'informasi' => $informasi,
-      'url' => $url
-    ]);
-
-    $this->load->view('_layout/ui/message-box/show');
-  }
-
   function is_logged_in($user,$url)
   {
     if ($this->session->userdata($user)==null) {
-      $this->alert('Anda belum login sebagai admin', $url);
+      $this->alert('Anda belum login sebagai '.$user, $url);
     }
   }
 }
@@ -75,5 +63,20 @@ class Admin extends Base
     $this->is_logged_in('admin', base_url('login'));
   }
 }
+
+/**
+ *
+ */
+class Petugas extends Base
+{
+
+  function __construct()
+  {
+    parent::__construct();
+    $this->load->library(['sidebar']);
+    $this->is_logged_in('petugas', base_url('login'));
+  }
+}
+
 
 ?>

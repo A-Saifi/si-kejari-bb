@@ -7,7 +7,7 @@
         </div>
         <div class="mb-footer">
             <div class="pull-right">
-                <a href="<?= base_url('logout')  ?>" class="btn btn-success btn-lg">Ya</a>
+                <a href="<?= base_url('admin/logout')  ?>" class="btn btn-success btn-lg">Ya</a>
                 <button class="btn btn-default btn-lg mb-control-close">Tidak</button>
             </div>
         </div>

@@ -2,7 +2,7 @@
 <div class="message-box message-box-success animated fadeIn" data-sound="alert" id="message-box-success">
     <div class="mb-container">
         <div class="mb-middle">
-            <div class="mb-title"><span class="fa fa-check"><</span> <?= $judul ?></div>
+            <div class="mb-title"><span class="fa fa-check"></span> <?= $judul ?></div>
             <div class="mb-content">
                 <p><?= $informasi ?></p>
             </div>

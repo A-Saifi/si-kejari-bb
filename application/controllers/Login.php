@@ -12,20 +12,29 @@ class Login extends Base
 
   function index()
   {
+    $this->load->model('admin/Role_model');
+    $role = $this->Role_model->get_all();
 
-    $this->layout->login([
-      'title' => 'Login',
-    ]);
-
-    $username = $this->input->post('username');
-    $password = md5($this->input->post('password'));
-
-    if (!empty($username) && !empty($password)) {
-      $this->auth([
-        'username' => $username,
-        'password' => $password
-      ]);
+    foreach ($role as $role) {
+      if (!empty($this->session->userdata($role->nama_role))) {
+        $this->go_to(base_url(strtolower($role->nama_role)));
+      }
     }
+
+      $this->layout->login([
+        'title' => 'Login',
+      ]);
+
+      $username = $this->input->post('username');
+      $password = md5($this->input->post('password'));
+
+      if (!empty($username) && !empty($password)) {
+        $this->auth([
+          'username' => $username,
+          'password' => $password
+        ]);
+      }
+
   }
 
   function auth($data)

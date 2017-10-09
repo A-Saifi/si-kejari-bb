@@ -22,7 +22,7 @@
                       <li role="presentation" class="dropdown-header">CRUD MENU</li>
                       <li><a href="<?= base_url('admin/petugas/detail/').$petugas->NIP ?>"><i class="fa fa-user"></i> Detail</a></li>
                       <li><a href="<?= base_url('admin/petugas/ubah/').$petugas->NIP ?>"><i class="fa fa-pencil-square-o"></i> Ubah</a></li>
-                      <li><a href="<?= base_url('admin/petugas/hapus/').$petugas->NIP ?>"><i class="fa fa-trash-o"></i> Hapus</a></li>
+                      <li><a href="<?= base_url('admin/petugas/hapus/').$petugas->NIP ?>" onclick="return confirm('Yakin ingin menghapus data <?= ucwords(strtolower($petugas->nama_pegawai)) ?> ?')"><i class="fa fa-trash-o"></i> Hapus</a></li>
                   </ul>
                 </div>
               </td>

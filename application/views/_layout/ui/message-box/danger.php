@@ -5,7 +5,7 @@
         <div class="mb-middle">
             <div class="mb-title"><span class="fa fa-times"></span> <?= $judul ?></div>
             <div class="mb-content">
-                <p><?= $judul ?></p>
+                <p><?= $informasi ?></p>
             </div>
             <div class="mb-footer">
                 <button class="btn btn-default btn-lg pull-right mb-control-close" id="button-danger">Close</button>

@@ -60,3 +60,11 @@ $route['admin/(:any)/(:any)'] = "admin/$1/$2";
 $route['admin/(:any)/(:any)/(:any)'] = "admin/$1/$2/$3";
 $route['admin/(:any)/(:any)/(:any)/(:any)'] = "admin/$1/$2/$3/$4";
 // End Admin
+
+// Route Admin
+$route['petugas'] = "petugas/dashboard";
+$route['petugas/(:any)'] = "petugas/$1";
+$route['petugas/(:any)/(:any)'] = "petugas/$1/$2";
+$route['petugas/(:any)/(:any)/(:any)'] = "petugas/$1/$2/$3";
+$route['petugas/(:any)/(:any)/(:any)/(:any)'] = "petugas/$1/$2/$3/$4";
+// End Admin

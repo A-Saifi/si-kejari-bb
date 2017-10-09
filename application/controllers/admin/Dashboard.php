@@ -15,6 +15,7 @@ class Dashboard extends Admin
         'breadcrumb' => [
                           ['page' => 'Dashboard', 'url' => base_url('admin')],
                         ],
+        'dashboard' => 'yes',
       ]
     );
   }
