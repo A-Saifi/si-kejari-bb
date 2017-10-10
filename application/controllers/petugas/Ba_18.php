@@ -7,6 +7,11 @@ class Ba_18 extends Petugas
 
   function index()
   {
+    $this->load->model(['petugas/Ba_18_model']);
+
+    $berita_acara = $this->Ba_18_model->get_all();
+
+    $this->load->library('petugas/display');
     $this->layout->petugas('ba_18/index',
       [
         'title' => 'Admin - BA-18',
@@ -16,6 +21,8 @@ class Ba_18 extends Petugas
                           ['page' => 'Berita Acara', 'url' => base_url('b_18')],
                         ],
         'form' => 'yes',
+        'data_tables' => 'yes',
+        'berita_acara' => $berita_acara,
       ]
     );
   }

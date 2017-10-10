@@ -8,10 +8,10 @@
     </ul>
   </div>
   <div class="panel-body">
-    <a href="<?= base_url('petugas/ba_18/buat/') ?>" class="btn btn-info pull-right"><span class="fa fa-plus-square"></span> Berita Acara Baru</a>
+    <a href="<?= base_url('petugas/ba_18/buat/') ?>" class="btn btn-info pull-left"><span class="fa fa-plus-square"></span> Berita Acara Baru</a>
   </div>
   <div class="panel-body">
-
+      <?php $this->load->view($view.'ba_18/index/tabel-ba') ?>
   </div>
 
 </div>

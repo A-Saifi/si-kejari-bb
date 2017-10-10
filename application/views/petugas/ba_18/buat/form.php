@@ -10,7 +10,7 @@
 
 
     <div class="panel-footer">
-        <a href="<?= base_url('admin/petugas') ?>" class="btn btn-default">Kembali</a>
+        <a href="<?= base_url('petugas/ba_18') ?>" class="btn btn-default">Kembali</a>
         <button type="reset" class="btn btn-default">Reset</button>
         <button type="submit" class="btn btn-primary pull-right">Selanjutnya</button>
     </div>
